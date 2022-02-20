@@ -21,6 +21,6 @@ mongoose.connect(process.env.Database_URL).then(()=>{
 }).catch((err)=>{
     console.log(err)
 })
-app.listen(process.env.port,()=>{
+app.listen(process.env.PORT,()=>{
     console.log(`server running at ${process.env.port}`)
 })
