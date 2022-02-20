@@ -12,6 +12,14 @@ const userSchema=mongoose.Schema({
     password:{
         type:String,
         required:true
+    },
+    isAdmin:{
+        type:Boolean,
+        default:'false'
+    },
+    date:{
+        type:Date,
+        default:Date.now
     }
 });
 

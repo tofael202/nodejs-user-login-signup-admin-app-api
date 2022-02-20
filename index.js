@@ -4,10 +4,14 @@ const dotenv=require('dotenv')
 dotenv.config()
 const mongoose=require('mongoose')
 const userRoute=require('./routes/userRouter')
+const authJwt=require('./auth/authjwt')
 
 
 //route
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
+app.set('view engine','ejs')
+//app.use(authJwt);
 app.use('/',userRoute)
 
 
